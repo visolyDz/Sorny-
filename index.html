@@ -2,50 +2,54 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sourny- | منصة الخدمات الرقمية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sourny — منصة الخدمات الرقمية</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="top">
     <div class="brand">
-      <h1>Sourny-</h1>
-      <p class="tag">منصة إدارة خدمات رقمية</p>
+      <a class="logo" href="#">Sourny</a>
+      <p class="tag">منصة إدارة الخدمات الرقمية — احترافية وسهلة</p>
     </div>
     <nav class="nav">
-      <a href="login.html" class="btn-ghost">تسجيل / دخول</a>
+      <a href="index.html">الرئيسية</a>
+      <a href="login.html">دخول</a>
+      <a href="dashboard.html">لوحة التحكم</a>
+      <button id="themeToggle" class="btn-ghost" aria-label="تبديل النمط">🌗</button>
     </nav>
   </header>
 
   <main class="hero">
-    <div class="hero-card">
-      <h2>حل متكامل لإدارة العملاء والطلبات</h2>
-      <p>لوحة تحكم خفيفة، إصدار فواتير، وتنظيم الخدمات — مُصممة للسوق الجزائري.</p>
-      <div class="actions">
-        <a href="login.html" class="btn">جرب الآن — مجاني</a>
-        <a href="dashboard.html" class="btn-ghost">معاينة لوحة التحكم</a>
+    <div class="hero-inner">
+      <h1>بناء وإدارة خدمات رقمية بسهولة</h1>
+      <p class="lead">موقع كامل — رفع إلى GitHub Pages — تصميم متوافق مع الهاتف.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="login.html">ابدأ الآن</a>
+        <a class="btn" href="#features">المزيد</a>
       </div>
     </div>
-    <div class="hero-illus" aria-hidden="true"></div>
   </main>
 
-  <section class="features">
-    <article>
-      <h3>لوحة تحكم احترافية</h3>
-      <p>إحصاءات، إدارة عملاء، وتصدير فواتير.</p>
-    </article>
-    <article>
-      <h3>آمن ومرن</h3>
-      <p>تسجيل دخول JWT وإمكانية الربط بقواعد بيانات لاحقًا.</p>
-    </article>
-    <article>
-      <h3>تصميم عصري</h3>
-      <p>Gradient ملون مطابق لاتجاهات 2026.</p>
-    </article>
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>تصميم واجهات</h3>
+      <p>واجهات حديثة ومتجاوبة تناسب المستخدمين والموبايل.</p>
+    </div>
+    <div class="feature">
+      <h3>رفع تلقائي على GitHub</h3>
+      <p>تعليمات جاهزة لنشر المشروع على GitHub Pages.</p>
+    </div>
+    <div class="feature">
+      <h3>محتوى وتوليد بالذكاء الاصطناعي</h3>
+      <p>قوالب ونصوص جاهزة لتوليد الصور والتعليقات الصوتية.</p>
+    </div>
   </section>
 
   <footer class="foot">
-    <small>© Sourny- 2026 — نسخة تجريبية</small>
+    <div>© 2026 Sourny — All rights reserved.</div>
   </footer>
+
+<script src="js/app.js"></script>
 </body>
 </html>
