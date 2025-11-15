@@ -2,40 +2,32 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>تسجيل / تسجيل دخول — Sourny-</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دخول — Sourny</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="auth-page">
-  <main class="auth-card">
-    <h2>تسجيل الدخول</h2>
-    <form id="login-form">
-      <label>البريد الإلكتروني
-        <input type="email" id="email" required />
-      </label>
-      <label>كلمة المرور
-        <input type="password" id="password" required />
-      </label>
-      <button class="btn" type="submit">دخول</button>
-      <p class="muted">لا تملك حساب؟ <a href="#" id="to-register">سجل الآن</a></p>
-    </form>
-
-    <form id="register-form" style="display:none;">
-      <h2>تسجيل جديد</h2>
-      <label>الاسم الكامل
-        <input type="text" id="rname" required />
-      </label>
-      <label>البريد الإلكتروني
-        <input type="email" id="remail" required />
-      </label>
-      <label>كلمة المرور
-        <input type="password" id="rpassword" required />
-      </label>
-      <button class="btn" id="do-register" type="button">إنشاء حساب</button>
-      <p class="muted"><a href="#" id="to-login">العودة للدخول</a></p>
-    </form>
+<body>
+  <main class="auth">
+    <div class="auth-card">
+      <h2>تسجيل الدخول</h2>
+      <form id="loginForm">
+        <label>البريد الإلكتروني</label>
+        <input type="email" id="email" required>
+        <label>كلمة السر</label>
+        <input type="password" id="password" required>
+        <button class="btn btn-primary" type="submit">دخول</button>
+      </form>
+      <p class="muted">هذا نموذج عرضي — يتم تخزين البيانات مؤقتًا في المتصفح.</p>
+      <a href="index.html" class="btn">العودة</a>
+    </div>
   </main>
-
-  <script src="js/auth.js"></script>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  localStorage.setItem('sourny_user', JSON.stringify({email:document.getElementById('email').value}));
+  alert('تم تسجيل الدخول (عرضي)');
+  window.location.href = 'dashboard.html';
+});
+</script>
 </body>
 </html>
